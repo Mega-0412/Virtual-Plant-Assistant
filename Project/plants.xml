@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="plants.xsl"?>
+
+<plantCareAssistant>
+    <plant>
+        <name>Rose</name>
+        <category>Flowering Plant</category>
+        <care>
+            <watering frequency="daily">Medium</watering>
+            <sunlight>Full Sun</sunlight>
+            <temperature>18°C - 30°C</temperature>
+            <soil>Well-drained soil</soil>
+            <fertilizer>Monthly</fertilizer>
+        </care>
+    </plant>
+
+    <plant>
+        <name>Aloe Vera</name>
+        <category>Succulent</category>
+        <care>
+            <watering frequency="weekly">Low</watering>
+            <sunlight>Partial Sun</sunlight>
+            <temperature>15°C - 25°C</temperature>
+            <soil>Sandy, Well-drained</soil>
+            <fertilizer>Every 6 months</fertilizer>
+        </care>
+    </plant>
+
+    <plant>
+        <name>Spider Plant</name>
+        <category>Indoor Plant</category>
+        <care>
+            <watering frequency="bi-weekly">Medium</watering>
+            <sunlight>Indirect Light</sunlight>
+            <temperature>15°C - 27°C</temperature>
+            <soil>Moist, Well-drained</soil>
+            <fertilizer>Every 2 months</fertilizer>
+        </care>
+    </plant>
+
+    <plant>
+        <name>Fiddle Leaf Fig</name>
+        <category>Indoor Tree</category>
+        <care>
+            <watering frequency="weekly">High</watering>
+            <sunlight>Bright, Indirect Light</sunlight>
+            <temperature>20°C - 25°C</temperature>
+            <soil>Rich, Well-drained</soil>
+            <fertilizer>Monthly</fertilizer>
+        </care>
+    </plant>
+</plantCareAssistant>

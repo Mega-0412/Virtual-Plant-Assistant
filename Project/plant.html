@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Plant Information</title>
+    <link rel="stylesheet" href="styleplant.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Add Plant Information</h1>
+        <form id="plantForm">
+            <div class="form-group">
+                <label for="plantName">Plant Name:</label>
+                <input type="text" id="plantName" name="plantName" required>
+            </div>
+            <div class="form-group">
+                <label for="plantUses">Uses:</label>
+                <textarea id="plantUses" name="plantUses" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="wateringSchedule">Watering Schedule:</label>
+                <input type="text" id="wateringSchedule" name="wateringSchedule" required>
+            </div>
+            <div class="form-group">
+                <label for="growingTips">Growing Tips and Tricks:</label>
+                <textarea id="growingTips" name="growingTips" rows="4" required></textarea>
+            </div>
+            <button type="submit">Add Plant</button>
+        </form>
+
+        <div id="plantList">
+            <h2>Added Plants</h2>
+            <ul id="plantDisplay"></ul>
+        </div>
+    </div>
+
+    <script src="scriptplant.js"></script>
+</body>
+</html>
+

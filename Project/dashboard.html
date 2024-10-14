@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floracare - Plant Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 10px;
+        }
+        .plant-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .plant-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .plant-card h3 {
+            margin: 0;
+            color: #2c5f2d;
+        }
+        .plant-card p {
+            margin: 10px 0;
+        }
+        .plant-card button {
+            background-color: #2c5f2d;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .add-plant {
+            margin: 20px;
+            text-align: center;
+        }
+        .add-plant button {
+            padding: 15px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Plant Dashboard</h1>
+        <p>Manage your plants and view care tips</p>
+    </div>
+    <div class="add-plant">
+        <button onclick="addPlant()">+ Add New Plant</button>
+    </div>
+    <div class="plant-list" id="plantList">
+        <div class="plant-card">
+            <h3>Fiddle Leaf Fig</h3>
+            <p>Water: Every 7 days</p>
+            <p>Last Watered: 3 days ago</p>
+            <p>Next Watering: In 4 days</p>
+            <button onclick="viewDetails('Fiddle Leaf Fig')">View Care Tips</button>
+        </div>
+    </div>
+
+    <script>
+
+        function addPlant() {
+            alert("Add plant functionality coming soon!");
+        }
+        function viewDetails(plantName) {
+            alert("Showing care tips for: " + plantName);
+        }
+    </script>
+</body>
+</html>

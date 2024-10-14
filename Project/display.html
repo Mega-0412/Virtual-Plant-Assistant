@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floracare - Plant Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 10px;
+        }
+        .plant-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .plant-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .plant-card h3 {
+            margin: 0;
+            color: #2c5f2d;
+        }
+        .plant-card p {
+            margin: 10px 0;
+        }
+        .plant-card button {
+            background-color: #2c5f2d;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .add-plant {
+            margin: 20px;
+            text-align: center;
+        }
+        .add-plant button {
+            padding: 15px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Plant Dashboard</h1>
+        <p>Manage your plants and view care tips</p>
+    </div>
+
+    <!-- Add Plant Button -->
+    <div class="add-plant">
+        <button onclick="location.href='addPlant.html'">+ Add New Plant</button>
+    </div>
+
+    <!-- Plant List -->
+    <div class="plant-list" id="plantList">
+        <!-- Plants will be displayed here -->
+    </div>
+
+    <script>
+        // Load plants from localStorage and display them
+        function loadPlants() {
+            const plantList = document.getElementById('plantList');
+            const plants = JSON.parse(localStorage.getItem('plants')) || [];
+
+            plantList.innerHTML = ''; // Clear previous plants
+
+            plants.forEach(plant => {
+                const plantCard = document.createElement('div');
+                plantCard.className = 'plant-card';
+
+                plantCard.innerHTML = `
+                    <h3>${plant.name}</h3>
+                    <p>Water: Every ${plant.schedule} days</p>
+                    <p>Last Watered: ${plant.lastWatered}</p>
+                    <p>Next Watering: ${plant.nextWatering}</p>
+                    <button onclick="viewDetails('${plant.name}')">View Care Tips</button>
+                `;
+
+                plantList.appendChild(plantCard);
+            });
+        }
+
+        // Function to view plant details (placeholder)
+        function viewDetails(plantName) {
+            alert("Showing care tips for: " + plantName);
+        }
+
+        // Load plants when page loads
+        window.onload = loadPlants;
+    </script>
+
+</body>
+</html>
